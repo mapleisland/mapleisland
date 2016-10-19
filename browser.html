@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>BroserInfomation</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+function print_object(object) {
+  var output = "";
+  var type = typeof(object);
+  if(type == "object") {
+    var obj = object;
+    for(i in obj) {
+      output += "<li><b>" + i + "</b>"+" : <span>" + obj[i] + "</span></li>";
+    }
+  }
+  document.getElementById("container").innerHTML = output;
+}
+print_object(navigator);
+</script>
+</body>
+</html>
